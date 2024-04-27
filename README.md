@@ -1,4 +1,4 @@
-![image](https://github.com/fayas1290/Learning-Git/assets/157561213/1d5cb78a-1d37-4e0e-a242-96bac7882d91)# Learning Git
+![image](https://github.com/fayas1290/Learning-Git/assets/157561213/056f8cf1-be02-4710-94b3-87be00e09177)![image](https://github.com/fayas1290/Learning-Git/assets/157561213/1d5cb78a-1d37-4e0e-a242-96bac7882d91)# Learning Git
 
 ## What is Git?
 
@@ -109,3 +109,61 @@ We changed text from "egg from chicken that listen to classical music" to "eggs 
 Now if we enter command git status  we can see following output
 
 ![image](https://github.com/fayas1290/Learning-Git/assets/157561213/af627d00-059b-4322-ab33-5917017d2e27)
+
+Git recognises that one of the files has been modified, to see what is modified,
+```bash
+Git diff
+```
+This will show us what the differences are
+
+We need to add the file again to the 'Staging', by ```git add index.htm```
+
+Staging is a place where your files sit until you are ready to commit them
+
+In git you have three different environments
+	1. Working files
+	2. Staging
+	3. Commit
+	• Adding as a log or an entry into the history book
+
+To remove the file from staging 
+```bash
+Git restore --staged <filename>
+Git restore --staged index.htm
+```
+This moves our files back to our working files, now if we commit this file will not be included
+
+
+Lets say you are working on 6 files, you  are ready to commit 3 of them, then we can add them to staging and commit them and leave the other three in the working files status
+
+We can bypass staging altogether as well, and commit
+```bash
+Git commit -A -m "updated text to free range"
+```
+
+We can delete file from git bash 
+
+```bash
+Git rm <filename>
+Git rm "secret recipe.htm"
+```
+Use " if filename has space
+
+Here we remove file called secret recipe.htm, 
+
+We can restore a file by
+```bash
+ Git restore <filename>
+```
+
+Files also can be renamed
+```bash
+Git mv "KCC logo.png" "Primary Logo.png"
+```
+
+To review all the commits made
+```bash
+Git log
+```
+
+
